@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Css do projeto-->
+    <link rel="stylesheet" href="css/esrilo.css">
+    <!--Bootstrap Css-->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/c600d5d8fe.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/fire-2.svg">
+    
+    <title>Fire</title>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <a href="" id="logo">
+            <h1>
+                Fire
+                <i class="fa-solid fa-fire-flame-curved"></i>
+            </h1>
+            
+        </a>
+        <button onclick="acao()" id="abre-modal">
+            
+            <i class="fa-solid fa-magnifying-glass "></i>
+        </button>
+        <nav id="nav">
+            
+            <button id="btn-mobile">
+                <i class="fa-solid fa-bars fa-3x"></i>
+            </button>
+            <ul id="menu">
+                <li><a href="">Nike</a></li>
+                <li><a href="">Vender na Fire</a></li>
+                <li><a href="">Parceiras</a></li>
+                <li><a href="">Lançamentos</a></li>
+                <li><a href="">Mais Vendidos</a></li>
+                <li><a href="">Cadastre-se</a></li>
+                <li><a href="">Logar</a></li>
+                <li><a href=""><i class="fa fa-heart fa-2x"></i></a></li>
+            </ul>
+            
+        </nav>
+        
+
+    
+
+        
+    </header>
+
+    <div id="modal"><!--Início Modal-->
+        <button id="voltar" onclick="fecha()">
+            <i class="fa-solid fa-arrow-left-long fa-3x"></i>
+        </button>
+        <div id="cont-modal">
+            <input  id="input" type="text" placeholder="Pesquisar">
+            <button onclick="apagar()" id="area-fechar">
+                <i class="fa-solid fa-xmark fa-3x"></i>
+            </button>
+        </div>
+    </div><!--/Fim Modal-->
+
+    <section id="home" class="d-flex"><!--Início seção 1-->
+        <div class="container align-self-center"><!--container-->
+          <div class="row"><!--row -->
+            <div class="col-md-12 capa">
+  
+              <div id="carousel-banner" class="carousel slide" data-ride="carousel"><!--Carousel -->
+                <div class="carousel-inner"><!--Inner -->
+  
+                  <div class="carousel-item active">
+                    <img id="img-carrossel-1" src="img/airmax-2.jpg" alt="" width="" class="img-fluid">
+                    <div class="carousel-caption">
+                        <button id="botao-banner">
+                            <h4>Comprar</h4>
+                        </button>
+                    </div>
+                  </div>
+  
+                  <div class="carousel-item">
+                    <img id="img-carrossel-2" src="img/max-3.png" alt="" class="img-fluid">
+
+                    <div class="carousel-caption">
+                      <button id="botao-banner-2">
+                          <h4>Comprar</h4>
+                      </button>
+                    </div>
+                  </div>
+  
+  
+                </div><!--/Inner -->
+  
+                <!--Controles -->
+                <a href="#carousel-banner" class="carousel-control-prev" data-slide="prev">
+                  <i class="fas fa-angle-left fa-3x "></i>
+                </a>
+  
+                <a href="#carousel-banner" class="carousel-control-next" data-slide="next">
+                  <i class="fas fa-angle-right fa-3x "></i>
+                </a>
+              </div><!--/Carousel -->
+  
+            </div>
+          </div><!--row -->
+        </div><!--/container -->
+      </section><!--/FIM seção 1-->
+
+      <section id="secao-2"><!--Início seção 2-->
+        
+        <div class="container" id="marcas">
+          <h2>Marcas Mais Vendidas</h2>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+              <div class="col-sm-3">
+                <img class="flutua" src="img/nike.png" alt="" width="60px">
+              </div>
+
+              <div class="col-sm-3">
+                <img class="flutua" src="img/adidas.png" alt="" width="60px">
+              </div>
+
+              <div class="col-sm-3">
+                <img class="flutua" src="img/puma.png" alt="" width="60px">
+              </div>
+
+              
+            </div>
+            
+          </div>
+        </div>
+      </section><!--/Fim seção 2-->
+
+      <section id="secao-3"><!--Início seção 3-->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card" id="cartao">
+                <img src="img/nike-tenis.jpg" alt="" class="card-img-top" id="imagem">
+                <div class="card-body text-center">
+                  <h4 class="card-title">AirForce 1</h4>
+                  <p class="alert alert-success">
+                    30% off
+                    <i class="fa-solid fa-bolt"></i>
+                  </p>
+                  <p class="card-text">Novo AirForce 1 destruction</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">R$ 355,90</a>
+
+                  <div class="mt-2 container">
+                    <a href="" class="btn btn-custom btn-coracao" id="coracao">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="" class="btn btn-custom btn-carrinho" id="carrinho">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" id="cartao">
+                <img src="img/nike-tenis-2.webp" alt="" class="card-img-top" id="imagem">
+                <div class="card-body text-center">
+                  <h4 class="card-title">AirForce 1</h4>
+                  <p class="alert alert-success">
+                    30% off
+                    <i class="fa-solid fa-bolt"></i>
+                  </p>
+                  <p class="card-text">Novo AirForce 1 destruction</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">R$ 355,90</a>
+
+                  <div class="mt-2 container">
+                    <a href="" class="btn btn-custom btn-coracao" id="coracao">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="" class="btn btn-custom btn-carrinho" id="carrinho">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" id="cartao">
+                <img src="img/tenis-nike-3.webp" alt="" class="card-img-top" id="imagem">
+                <div class="card-body text-center">
+                  <h4 class="card-title">AirForce 1</h4>
+                  <p class="alert alert-success">
+                    30% off
+                    <i class="fa-solid fa-bolt"></i>
+                  </p>
+                  <p class="card-text">Novo AirForce 1 destruction</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">R$ 355,90</a>
+
+                  <div class="mt-2 container">
+                    <a href="" class="btn btn-custom btn-coracao" id="coracao">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="" class="btn btn-custom btn-carrinho" id="carrinho">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" id="cartao">
+                <img src="img/nike-tenis-4.webp" alt="" class="card-img-top" id="imagem">
+                <div class="card-body text-center">
+                  <h4 class="card-title">AirForce 1</h4>
+                  <p class="alert alert-success">
+                    30% off
+                    <i class="fa-solid fa-bolt"></i>
+                  </p>
+                  <p class="card-text">Novo AirForce 1 destruction</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">R$ 355,90</a>
+
+                  <div class="mt-2 container">
+                    <a href="" class="btn btn-custom btn-coracao" id="coracao">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="" class="btn btn-custom btn-carrinho" id="carrinho">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" id="cartao">
+                <img src="img/nike-tenis-5.webp" alt="" class="card-img-top" id="imagem">
+                <div class="card-body text-center">
+                  <h4 class="card-title">AirForce 1</h4>
+                  <p class="alert alert-success">
+                    30% off
+                    <i class="fa-solid fa-bolt"></i>
+                  </p>
+                  <p class="card-text">Novo AirForce 1 destruction</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">R$ 355,90</a>
+
+                  <div class="mt-2 container">
+                    <a href="" class="btn btn-custom btn-coracao" id="coracao">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="" class="btn btn-custom btn-carrinho" id="carrinho">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" id="cartao">
+                <img src="img/nike-tenis-6.webp" alt="" class="card-img-top" id="imagem">
+                <div class="card-body text-center">
+                  <h4 class="card-title">AirForce 1</h4>
+                  <p class="alert alert-success">
+                    30% off
+                    <i class="fa-solid fa-bolt"></i>
+                  </p>
+                  <p class="card-text">Novo AirForce 1 destruction</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">R$ 355,90</a>
+
+                  <div class="mt-2 container">
+                    <a href="" class="btn btn-custom btn-coracao" id="coracao">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="" class="btn btn-custom btn-carrinho" id="carrinho">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" id="cartao">
+                <img src="img/tenis-nike-7.webp" alt="" class="card-img-top" id="imagem">
+                <div class="card-body text-center">
+                  <h4 class="card-title">AirForce 1</h4>
+                  <p class="alert alert-success">
+                    30% off
+                    <i class="fa-solid fa-bolt"></i>
+                  </p>
+                  <p class="card-text">Novo AirForce 1 destruction</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">R$ 355,90</a>
+
+                  <div class="mt-2 container">
+                    <a href="" class="btn btn-custom btn-coracao" id="coracao">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="" class="btn btn-custom btn-carrinho" id="carrinho">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card" id="cartao">
+                <img src="img/tenis-nike-8.webp" alt="" class="card-img-top" id="imagem">
+                <div class="card-body text-center">
+                  <h4 class="card-title">AirForce 1</h4>
+                  <p class="alert alert-success">
+                    30% off
+                    <i class="fa-solid fa-bolt"></i>
+                  </p>
+                  <p class="card-text">Novo AirForce 1 destruction</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">R$ 355,90</a>
+
+                  <div class="mt-2 container">
+                    <a href="" class="btn btn-custom btn-coracao" id="coracao">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a href="" class="btn btn-custom btn-carrinho" id="carrinho">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section><!--/Fim seção 3-->
+
+        <section id="secao-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <img id="video" class="img-fluid" width="600px" src="img/30off.gif" alt="">
+              </div>
+              <div class="col-md-6">
+                <img width="600px" class="img-fluid" id="video" src="img/jordan-retro.gif" alt="">
+              </div>
+            </div>
+          </div>
+         
+        </section>
+        
+      
+        <section id="secao-5"><!--Início Seção 5-->
+          <div class="container">
+            <div id="titulo">
+              <h2>O que os clientes dizem</h2>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card" id="cartao">
+                  <div id="usuario">
+                    <img src="img/user-2.svg" width="50px" alt="" class="img-fluid" id="usuario">
+                  </div>
+                
+                <div class="card-body text-center">
+                  <h4 class="card-title">Cláudio</h4>
+                  <div id="avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  
+                  <p class="card-text">"Atendimento sempre perfeito!"</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">Ver avaliação</a>
+
+                  
+                </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card" id="cartao">
+                  <div id="usuario">
+                    <img src="img/user-2.svg" width="50px" alt="" class="img-fluid" id="usuario">
+                  </div>
+                
+                <div class="card-body text-center">
+                  <h4 class="card-title">Marcela</h4>
+                  <div id="avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  
+                  <p class="card-text">"Produtos chegaram impecáveis!"</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">Ver avaliação</a>
+
+                  
+                </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card" id="cartao">
+                  <div id="usuario">
+                    <img src="img/user-2.svg" width="50px" alt="" class="img-fluid" id="usuario">
+                  </div>
+                
+                <div class="card-body text-center">
+                  <h4 class="card-title">Luiz</h4>
+                  <div id="avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  
+                  <p class="card-text">"Essa parceria com a nike veio pra abalar!"</p>
+                  <a href="" class="btn btn-custom btn-cartao" id="compra">Ver avaliação</a>
+
+                  
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section><!--/Fim Seção 5-->
+
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2">
+                <img src="img/fire-2.svg" width="100">
+              </div>
+    
+              <div class="col-md-2">
+                <h4>Company</h4>
+                <ul class="navbar-nav">
+                  <li><a href="">Sobre</a></li>
+                  <li><a href="">Empregos</a></li>
+                  <li><a href="">Afiliados</a></li>
+                  <li><a href="">Vender na Fire</a></li>
+                </ul>
+              </div>
+    
+               <div class="col-md-2">
+                <h4>Comunidades</h4>
+                <ul class="navbar-nav">
+                  <li><a href="">Promoções</a></li>
+                  <li><a href="">História da Fire</a></li>
+                  <li><a href="">Lançamentos</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-md-2">
+                <h4>Links Úteis</h4>
+                <ul class="navbar-nav">
+                  <li><a href="">Ajuda</a></li>
+                  <li><a href="">Presentes</a></li>
+                  <li><a href="">crie seu tênis</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-md-4">
+                <ul>
+                  <li>
+                    <a href="">
+                      <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                  </li>
+    
+                  <li>
+                    <a href="">
+                      <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                  </li>
+    
+                  <li>
+                    <a href="">
+                      <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
