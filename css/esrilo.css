@@ -65,142 +65,19 @@ body {
     color: blue;
     transition: all .3s;
 }
-#home {
-    margin-top: 75px;
-    padding: 25px;
-    display: flex;
+
+#titulo-fav {
     justify-content: center;
     align-items: center;
+    text-align: center;
+    color: #fff;
 }
 
-h2 {
-	font-size: 3em;
-	font-weight: 700;
-	letter-spacing: -0.04em;
-	color: #fff;
-}
 
-section .cartao {
-    border-radius: 30px;
-	margin-top: 15px;
-	margin-bottom: 10px;
-	position: relative;
-}
-
-section .cartao:hover {
-	cursor: pointer;
-	box-shadow: 1px 1px 5px #000;
-	transition: all .6s;
-	bottom: 5px;
-	z-index: 50px;
-}
-#video {
-    margin-top: 10px;
-    border-radius: 20px;
-}
-#secao-4 {
-    padding: 15px;
-    margin: 15px;
-}
-.cartao .compra {
-    border-radius: 300px;
-}
 .btn-custom {
 	color: #fff;
 	border-radius: 500px;
 	transition: background 0.6s, color 0.4s;
-}
-
-.btn-coracao {
-	background: blue;
-}
-.cartao .coracao {
-    border-radius: 300px;
-}
-.btn-coracao:hover {
-	background: #ff1616;
-	color: #fff;
-	
-}
-
-.btn-carrinho{
-	background: blue;
-}
-.btn-carrinho:hover {
-	background: #ff1616;
-	color: #fff;
-	
-}
-.cartao .carrinho {
-    border-radius: 300px;
-}
-.cartao .imagem {
-    border-radius: 30px;
-}
-.btn-cartao {
-    
-	background: #ff1616;
-	color: #fff;
-}
-.btn-cartao:hover {
-    transition: all .6s;
-	background: blue;
-    color: #fff;
-
-}
-
-#img-carrossel-1 {
-    border-radius: 20px;
-    
-}
-#botao-banner {
-    border: 2px solid #ff0f0f;
-    cursor: pointer;
-    padding: 15px;
-    width: 200px;
-    margin-right: 20px;
-    background: none;
-    border-radius: 300px;
-    outline: none;
-    font-weight: bold;
-    color: #ff0f0f;
-}
-
-#botao-banner-2 {
-    border: 2px solid #fff;
-    cursor: pointer;
-    padding: 15px;
-    width: 200px;
-    margin-right: 20px;
-    background: none;
-    border-radius: 300px;
-    outline: none;
-    font-weight: bold;
-    color: #fff;
-}
-#botao-banner-2:hover {
-    transition: all .6s;
-    background: #fff;
-    color: blue;
-}
-#botao-banner:hover {
-    transition: all .6s;
-    background: #ff0f0f;
-    color: #fff;
-}
-#img-carrossel-2 {
-    border-radius: 20px;
-}
-
-.carousel-control-next, .carousel-control-prev {
-	width: 1%;
-    
-}
-.carousel-control-next .fas {
-    color:  rgba(0, 0, 0, 0.6);
-}
-.carousel-control-prev .fas {
-    color: rgba(0, 0, 0, 0.6);
 }
 
 #modal {
@@ -237,18 +114,126 @@ section .cartao:hover {
     background: none;
     
 }
-#avaliacao {
-    color: rgb(255, 234, 4);
+
+
+#heart {
+    border: none;
+    outline: none;
+    color: #ff1616;
+    margin-top: 8px;
+    background: none;
+    cursor: pointer;
 }
-#usuario{
-    margin-top: 10px;
+#heartcheck {
+    border: none;
+    display: none;
+    outline: none;
+    color: #ff1616;
+    margin-top: 8px;
+    background: none;
+    cursor: pointer;
+}
+#heartcheck:hover{
+    transition: all .6s;
+    color: blue;
+}
+#heart:hover {
+    transition: all .6s;
+    color: blue;
+}
+#areaFavoritos {
+    right: 0;
+    top: 0;
+    width: 80%;
+    overflow-x: hidden;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    display: none;
+    z-index: 3000;
+    background-color: rgba(0, 0, 0, .9);
+    animation: favoritos;
+    animation-duration: 800ms;
+}
+#secaofavoritos {
+    list-style-type: none;
+    
+}
+#secaofavoritos li {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 330px;
+    background-color: #fff;
+    transition: .5s ease-in-out;
+    border-radius: 20px;
+    
+}
+#secaofavoritos li a {
+    border-radius: 20px;
+}
+button.botacao {
+    border-radius: 30px;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    background-color:  rgb(145, 143, 143);
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+button.botacao:hover {
+    background-color: black;
+    transition: all .6s;
+}
+
+#botoes{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
-#marcas {
-    text-align: center;
+#secaofavoritos li:hover{
+    cursor: pointer;
+	transition: all .6s;
+    transform: scale(1.02);
+    /*filter: brightness(120%);*/
+	bottom: 5px;
+	z-index: 50px;
 }
+#secaofavoritos li button {
+    border-radius: 20px;
+}
+#secaofavoritos li .btn-carrinho{
+    display: none;
+}
+#secaofavoritos li .btn-coracao{
+    display: none;
+}
+#secaofavoritos li img {
+    border-radius: 20px;
+}
+#sair {
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ff0f0f;
+    background: none;
+}
+#sair:hover{
+    color: #900000;
+    transition: all .6s;
+}
+@keyframes favoritos {
+    from {
+        width: 0;
+
+    }
+    to{
+        width: 80%;
+    }
+}
+
 #cont-modal input::placeholder {
     color: #fff;
 }
@@ -262,49 +247,6 @@ section .cartao:hover {
     color: #fff;
 }
 
-#secao-2 {
-    margin-top: 10px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    
-}
-#secao-3 {
-    background: #fff;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-#secao-5 {
-    background: #fff;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.flutua {
-    position: relative;
-    animation-name: animacao-img;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transition: 0.5s;
-
-}
-@keyframes animacao-img{
-    from {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-    to {
-        top: 10px;
-        left: 10px;
-        bottom: 10px;
-        
-        right: 10px;
-    }
-}
 #titulo{
     display: flex;
     justify-content: center;
@@ -388,7 +330,7 @@ footer ul li a i:hover {
 
     
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     html {
         overflow-x: hidden;
     }
@@ -420,6 +362,17 @@ footer ul li a i:hover {
         overflow-y: hidden;
 
     }
+    #secaofavoritos li {
+        margin-right: 15px;
+    }
+    #cont-modal {
+        margin-right: 85px;
+        overflow-x: hidden;
+    }
+    #cont-modal input{
+        
+        width: 60%;
+    }
     
     #nav.active #menu {
         height: calc(100vh - 70px);
@@ -432,7 +385,7 @@ footer ul li a i:hover {
         transition: all .6s;
     }
      #modal {
-    
+        overflow-x: hidden;
         overflow-y: auto;
         z-index: 30000;
         

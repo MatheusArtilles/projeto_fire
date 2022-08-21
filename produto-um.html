@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/esrilo.css">
+    <link rel="stylesheet" href="css/produto-um.css">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c600d5d8fe.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/fire-2.svg">
+    <title> Air force 1</title>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <a href="" id="logo">
+            <h1>
+                Fire
+                <i class="fa-solid fa-fire-flame-curved"></i>
+            </h1>
+            
+        </a>
+        <button onclick="acao()" id="abre-modal">
+            
+            <i class="fa-solid fa-magnifying-glass "></i>
+        </button>
+        <nav id="nav">
+            
+            <button id="btn-mobile">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+            <ul id="menu">
+                <li><a href="">Nike</a></li>
+                <li><a href="">Vender na Fire</a></li>
+                <li><a href="">Parceiras</a></li>
+                <li><a href="">Lançamentos</a></li>
+                <li><a href="">Mais Vendidos</a></li>
+                <li><a href="">Cadastre-se</a></li>
+                <li><a href="">Logar</a></li>
+                <li>
+                  <button onclick="abrelista()" id="heart"><i class="fa fa-heart fa-2x"></i></button>
+                  <button onclick="abrelista()" id="heartcheck"><i class="fa-solid fa-heart-circle-check fa-2x"></i></button>
+                </li>
+            </ul>
+            
+        </nav>
+        
+    </header>
+
+    <div id="modal"><!--Início Modal-->
+        <button id="voltar" onclick="fecha()">
+            <i class="fa-solid fa-arrow-left-long fa-3x"></i>
+        </button>
+        <div id="cont-modal">
+            <input  id="input" type="text" placeholder="Pesquisar">
+            <button onclick="apagar()" id="area-fechar">
+                <i class="fa-solid fa-xmark fa-3x"></i>
+            </button>
+        </div>
+    </div><!--/Fim Modal-->
+
+    <div id="areaFavoritos"><!--Início Favoritos-->
+     
+        <button id="sair" onclick="fechar()">
+          <i class="fa-solid fa-xmark fa-2x"></i>
+        </button>
+
+        
+     
+      
+      <div id="titulo-fav">
+        <h2>
+          Lista de favoritos
+        </h2>
+      </div>
+      <div class="container">
+        <ul class="row" id="secaofavoritos">
+          
+        </ul>
+      </div>
+      
+    </div><!--/Fim Favoritos-->
+
+    <section id="secao-um">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                  <div>
+                    <h2>Tênis Nike Air Force one</h2>
+                    <p class="preco-ant">de R$ 450,00</p>
+                    <p class="preco-pos">por R$ 355,90</p>
+                    <a href="" class="btn btn-custom" id="compra-air">Adiquirir agora</a>
+                    <div class="area-escolhas">
+                        <input onclick="escolhe('imagem', 'img/nike-tenis.jpg')" type="image" src="img/nike-tenis.jpg" width="80px">
+                        <input onclick="escolhe('imagem', 'img2/dunk-1.webp')"  type="image" src="img2/dunk-1.webp" width="80px">
+                        <input onclick="escolhe('imagem', 'img2/dunk-2.webp')"  type="image" src="img2/dunk-2.webp" width="80px">
+                        <input onclick="escolhe('imagem', 'img2/dunk-3.webp')"  type="image" src="img2/dunk-3.webp" width="80px">
+                        <input onclick="escolhe('imagem', 'img2/dunk-4.webp')"  type="image" src="img2/dunk-4.webp" width="80px">
+                        
+                    </div>
+                    
+                  </div>  
+                </div>
+                <div class="col-md-6">
+                    <div class="area-imagem">
+                        <img id="imagem" src="img/nike-tenis.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="area-dois">
+      <div class="container">
+        <div id="sobre-air">
+          <h2>Sobre o AirForce one</h2>
+          
+        </div>
+        <p>
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
+          distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
+          and a search for 'lorem ipsum'
+          will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
+      </div>
+    </section>
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="img/fire-2.svg" width="100">
+            </div>
+  
+            <div class="col-md-2">
+              <h4>Company</h4>
+              <ul class="navbar-nav">
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Empregos</a></li>
+                <li><a href="">Afiliados</a></li>
+                <li><a href="">Vender na Fire</a></li>
+              </ul>
+            </div>
+  
+             <div class="col-md-2">
+              <h4>Comunidades</h4>
+              <ul class="navbar-nav">
+                <li><a href="">Promoções</a></li>
+                <li><a href="">História da Fire</a></li>
+                <li><a href="">Lançamentos</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-md-2">
+              <h4>Links Úteis</h4>
+              <ul class="navbar-nav">
+                <li><a href="">Ajuda</a></li>
+                <li><a href="">Presentes</a></li>
+                <li><a href="">crie seu tênis</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-md-4">
+              <ul>
+                <li>
+                  <a href="">
+                    <i class="fab fa-instagram fa-3x"></i>
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="">
+                    <i class="fab fa-twitter fa-3x"></i>
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="">
+                    <i class="fab fa-facebook fa-3x"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/produto-um.js"></script>
+</body>
+</html>

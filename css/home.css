@@ -1,0 +1,197 @@
+#home {
+    margin-top: 75px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .cartao {
+    border-radius: 30px;
+    border: none;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+section .cartao:hover {
+	cursor: pointer;
+	box-shadow: 1px 1px 5px #000;
+	transition: all .6s;
+	bottom: 5px;
+    transform: scale(1.02);
+	z-index: 50px;
+}
+
+#video {
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+#secao-4 {
+    padding: 15px;
+    margin: 15px;
+}
+
+.cartao .compra {
+    border-radius: 300px;
+}
+
+.btn-coracao {
+	background: blue;
+}
+
+.cartao .coracao {
+    border-radius: 300px;
+}
+.btn-coracao:hover {
+	background: #ff1616;
+	color: #fff;
+	
+}
+
+.btn-carrinho{
+	background: blue;
+}
+.btn-carrinho:hover {
+	background: #ff1616;
+	color: #fff;
+	
+}
+.cartao .carrinho {
+    border-radius: 300px;
+}
+.cartao .imagem {
+    border-radius: 30px;
+}
+.btn-cartao {
+    
+	background: #ff1616;
+	color: #fff;
+}
+.btn-cartao:hover {
+    transition: all .6s;
+	background: blue;
+    color: #fff;
+
+}
+
+#img-carrossel-1 {
+    border-radius: 20px;
+    
+}
+#botao-banner {
+    border: 2px solid #ff0f0f;
+    cursor: pointer;
+    padding: 15px;
+    width: 200px;
+    margin-right: 20px;
+    background: none;
+    border-radius: 300px;
+    outline: none;
+    font-weight: bold;
+    color: #ff0f0f;
+}
+
+#botao-banner-2 {
+    border: 2px solid #fff;
+    cursor: pointer;
+    padding: 15px;
+    width: 200px;
+    margin-right: 20px;
+    background: none;
+    border-radius: 300px;
+    outline: none;
+    font-weight: bold;
+    color: #fff;
+}
+#botao-banner-2:hover {
+    transition: all .6s;
+    background: #fff;
+    color: blue;
+}
+#botao-banner:hover {
+    transition: all .6s;
+    background: #ff0f0f;
+    color: #fff;
+}
+#img-carrossel-2 {
+    border-radius: 20px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+	width: 1%;
+    
+}
+.carousel-control-next .fas {
+    color:  rgba(0, 0, 0, 0.6);
+}
+.carousel-control-prev .fas {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#avaliacao {
+    color: rgb(255, 234, 4);
+}
+
+#usuario{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	color: #fff;
+}
+#marcas {
+    text-align: center;
+}
+
+#secao-2 {
+    margin-top: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
+#secao-3 {
+    background: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#secao-5 {
+    background: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.flutua {
+    position: relative;
+    animation-name: animacao-img;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: 0.5s;
+
+}
+
+@keyframes animacao-img{
+    from {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    to {
+        top: 10px;
+        left: 10px;
+        bottom: 10px;
+        
+        right: 10px;
+    }
+}

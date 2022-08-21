@@ -1,0 +1,58 @@
+#secao-um {
+    margin-top: 75px;
+    padding: 25px;
+
+}
+.preco-ant {
+    text-decoration: line-through;
+    color: rgb(136, 134, 134);
+    font-size: 1.1em;
+}
+.preco-pos {
+    color: green;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+#secao-um h2{
+    font-size: 2em;
+}
+
+#compra-air{
+    margin-bottom: 100px;
+    margin-top: -20px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 300px;
+    color: #000;
+}
+#compra-air:hover{
+    background-color: #000;
+    color: #fff;
+    transition: all .6s;
+}
+.area-escolhas {
+    margin-bottom: 100px;
+    margin-top: -30px;
+    padding: 10px;
+}
+.area-imagem{
+    margin-bottom: 10px;
+}
+
+#area-dois {
+    margin: 15px;
+    padding: 25px;
+}
+#area-dois p {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: rgb(92, 92, 92);
+}
+#sobre-air {
+    text-align: center;
+}

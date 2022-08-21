@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Css do projeto-->
     <link rel="stylesheet" href="css/esrilo.css">
+    <link rel="stylesheet" href="css/home.css">
     <!--Bootstrap Css-->
     <link rel="stylesheet" 
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
@@ -43,14 +44,13 @@
                 <li><a href="">Mais Vendidos</a></li>
                 <li><a href="">Cadastre-se</a></li>
                 <li><a href="">Logar</a></li>
-                <li><a href=""><i class="fa fa-heart fa-2x"></i></a></li>
+                <li>
+                  <button onclick="abrelista()" id="heart"><i class="fa fa-heart fa-2x"></i></button>
+                  <button onclick="abrelista()" id="heartcheck"><i class="fa-solid fa-heart-circle-check fa-2x"></i></button>
+                </li>
             </ul>
             
         </nav>
-        
-
-    
-
         
     </header>
 
@@ -65,6 +65,28 @@
             </button>
         </div>
     </div><!--/Fim Modal-->
+
+    <div id="areaFavoritos"><!--Início Favoritos-->
+     
+        <button id="sair" onclick="fechar()">
+          <i class="fa-solid fa-xmark fa-2x"></i>
+        </button>
+
+        
+     
+      
+      <div id="titulo-fav">
+        <h2>
+          Lista de favoritos
+        </h2>
+      </div>
+      <div class="container">
+        <ul class="row" id="secaofavoritos">
+          
+        </ul>
+      </div>
+      
+    </div><!--/Fim Favoritos-->
 
     <section id="home" class="d-flex"><!--Início seção 1-->
         <div class="container align-self-center"><!--container-->
@@ -140,8 +162,10 @@
         <div class="container">
           <div class="row">
             <div class="col-md-3">
-              <div class="card cartao">
-                <img src="img/nike-tenis.jpg" alt="" class="card-img-top imagem">
+              
+              <div class="card cartao" id="cartao-um" >
+                
+                <img src="img/nike-tenis.jpg" alt="" class="card-img-top imagem" onclick="window.location.assign('produto-um.html')">
                 <div class="card-body text-center">
                   <h4 class="card-title">AirForce 1</h4>
                   <p class="alert alert-success">
@@ -152,9 +176,9 @@
                   <a href="" class="btn btn-custom btn-cartao compra">R$ 355,90</a>
 
                   <div class="mt-2 container">
-                    <a href="" class="btn btn-custom btn-coracao coracao">
+                    <button onclick="lista1.adicionar('cartao-um')" href="" class="btn btn-custom btn-coracao coracao">
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </button>
                     <a href="" class="btn btn-custom btn-carrinho carrinho">
                       <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -164,8 +188,9 @@
             </div>
 
             <div class="col-md-3">
-              <div class="card cartao">
-                <img src="img/nike-tenis-2.webp" alt="" class="card-img-top imagem">
+              <div class="card cartao" id="cartao-dois">
+                
+                <img src="img/nike-tenis-2.webp" alt="" class="card-img-top imagem" onclick="window.location.assign('produto-um.html')">
                 <div class="card-body text-center">
                   <h4 class="card-title">AirForce 1</h4>
                   <p class="alert alert-success">
@@ -176,9 +201,9 @@
                   <a href="" class="btn btn-custom btn-cartao compra">R$ 355,90</a>
 
                   <div class="mt-2 container">
-                    <a href="" class="btn btn-custom btn-coracao coracao">
+                    <button onclick="lista2.adicionar('cartao-dois')" href="" class="btn btn-custom btn-coracao coracao">
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </button>
                     <a href="" class="btn btn-custom btn-carrinho carrinho">
                       <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -188,8 +213,9 @@
             </div>
 
             <div class="col-md-3">
-              <div class="card cartao">
-                <img src="img/tenis-nike-3.webp" alt="" class="card-img-top imagem">
+              <div class="card cartao" id="cartao-tres">
+                
+                <img src="img/tenis-nike-3.webp" alt="" class="card-img-top imagem" onclick="window.location.assign('produto-um.html')">
                 <div class="card-body text-center">
                   <h4 class="card-title">AirForce 1</h4>
                   <p class="alert alert-success">
@@ -200,9 +226,9 @@
                   <a href="" class="btn btn-custom btn-cartao compra">R$ 355,90</a>
 
                   <div class="mt-2 container">
-                    <a href="" class="btn btn-custom btn-coracao coracao">
+                    <button onclick="lista3.adicionar('cartao-tres')" href="" class="btn btn-custom btn-coracao coracao">
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </button>
                     <a href="" class="btn btn-custom btn-carrinho carrinho">
                       <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -212,8 +238,9 @@
             </div>
 
             <div class="col-md-3">
-              <div class="card cartao">
-                <img src="img/nike-tenis-4.webp" alt="" class="card-img-top imagem">
+              <div class="card cartao" id="cartao-quatro">
+                
+                <img src="img/nike-tenis-4.webp" alt="" class="card-img-top imagem" onclick="window.location.assign('produto-um.html')">
                 <div class="card-body text-center">
                   <h4 class="card-title">AirForce 1</h4>
                   <p class="alert alert-success">
@@ -224,9 +251,9 @@
                   <a href="" class="btn btn-custom btn-cartao compra">R$ 355,90</a>
 
                   <div class="mt-2 container">
-                    <a href="" class="btn btn-custom btn-coracao coracao">
+                    <button onclick="lista4.adicionar('cartao-quatro')" href="" class="btn btn-custom btn-coracao coracao">
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </button>
                     <a href="" class="btn btn-custom btn-carrinho carrinho">
                       <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -236,8 +263,9 @@
             </div>
 
             <div class="col-md-3">
-              <div class="card cartao">
-                <img src="img/nike-tenis-5.webp" alt="" class="card-img-top imagem">
+              <div class="card cartao" id="cartao-cinco">
+                
+                <img src="img/nike-tenis-5.webp" alt="" class="card-img-top imagem" onclick="window.location.assign('produto-um.html')">
                 <div class="card-body text-center">
                   <h4 class="card-title">AirForce 1</h4>
                   <p class="alert alert-success">
@@ -248,9 +276,9 @@
                   <a href="" class="btn btn-custom btn-cartao compra">R$ 355,90</a>
 
                   <div class="mt-2 container">
-                    <a href="" class="btn btn-custom btn-coracao coracao">
+                    <button onclick="lista5.adicionar('cartao-cinco')" href="" class="btn btn-custom btn-coracao coracao">
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </button>
                     <a href="" class="btn btn-custom btn-carrinho carrinho">
                       <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -260,8 +288,9 @@
             </div>
 
             <div class="col-md-3">
-              <div class="card cartao">
-                <img src="img/nike-tenis-6.webp" alt="" class="card-img-top imagem">
+              <div class="card cartao" id="cartao-seis">
+                
+                <img src="img/nike-tenis-6.webp" alt="" class="card-img-top imagem" onclick="window.location.assign('produto-um.html')">
                 <div class="card-body text-center">
                   <h4 class="card-title">AirForce 1</h4>
                   <p class="alert alert-success">
@@ -272,9 +301,9 @@
                   <a href="" class="btn btn-custom btn-cartao compra">R$ 355,90</a>
 
                   <div class="mt-2 container">
-                    <a href="" class="btn btn-custom btn-coracao coracao">
+                    <button onclick="lista6.adicionar('cartao-seis')" href="" class="btn btn-custom btn-coracao coracao">
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </button>
                     <a href="" class="btn btn-custom btn-carrinho carrinho">
                       <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -284,8 +313,9 @@
             </div>
 
             <div class="col-md-3">
-              <div class="card cartao">
-                <img src="img/tenis-nike-7.webp" alt="" class="card-img-top imagem">
+              <div class="card cartao" id="cartao-sete">
+                
+                <img src="img/tenis-nike-7.webp" alt="" class="card-img-top imagem" onclick="window.location.assign('produto-um.html')">
                 <div class="card-body text-center">
                   <h4 class="card-title">AirForce 1</h4>
                   <p class="alert alert-success">
@@ -296,9 +326,9 @@
                   <a href="" class="btn btn-custom btn-cartao compra">R$ 355,90</a>
 
                   <div class="mt-2 container">
-                    <a href="" class="btn btn-custom btn-coracao coracao">
+                    <button onclick="lista7.adicionar('cartao-sete')" href="" class="btn btn-custom btn-coracao coracao">
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </button>
                     <a href="" class="btn btn-custom btn-carrinho carrinho">
                       <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -308,8 +338,9 @@
             </div>
 
             <div class="col-md-3">
-              <div class="card cartao">
-                <img src="img/tenis-nike-8.webp" alt="" class="card-img-top imagem">
+              <div class="card cartao" id="cartao-oito">
+                
+                <img src="img/tenis-nike-8.webp" alt="" class="card-img-top imagem" onclick="window.location.assign('produto-um.html')">
                 <div class="card-body text-center">
                   <h4 class="card-title">AirForce 1</h4>
                   <p class="alert alert-success">
@@ -320,9 +351,9 @@
                   <a href="" class="btn btn-custom btn-cartao compra">R$ 355,90</a>
 
                   <div class="mt-2 container">
-                    <a href="" class="btn btn-custom btn-coracao coracao">
+                    <button onclick="lista8.adicionar('cartao-oito')" href="" class="btn btn-custom btn-coracao coracao">
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </button>
                     <a href="" class="btn btn-custom btn-carrinho carrinho">
                       <i class="fas fa-shopping-cart"></i>
                     </a>
@@ -502,6 +533,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
     crossorigin="anonymous"></script>
+    <script src="js/favoritos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
